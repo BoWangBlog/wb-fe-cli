@@ -1,6 +1,2 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/.gitignore
-.idea/create-react-webpack-app.iml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
+.idea
