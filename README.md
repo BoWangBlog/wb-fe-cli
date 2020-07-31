@@ -34,7 +34,7 @@ cracli init [projectName]
 ## Usage
 
 ```shell script
-npm install -g cracli
+npm insttall -g wb-create-react-cli
 cracli init [projectName]
 ```
 ## Author
