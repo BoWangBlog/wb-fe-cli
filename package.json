@@ -1,0 +1,47 @@
+{
+    "name": "create-react-app-cli",
+    "version": "1.0.0",
+    "description": "a react project cli, help you create a react project with webpack or parcel quickly",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bin": {
+        "cracli": "index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/webbx/create-react-app-cli.git"
+    },
+    "dependencies": {
+        "chalk": "^4.1.0",
+        "commander": "^6.0.0",
+        "download": "^8.0.0",
+        "download-git-repo": "^3.0.2",
+        "handlebars": "^4.7.6",
+        "inquirer": "^7.3.3",
+        "ora": "^4.0.5",
+        "symbols": "^0.0.6",
+        "cross-spawn": "^7.0.3"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.1.0",
+        "shelljs": "^0.8.4",
+        "eslint": "^7.5.0",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-jsx-a11y": "^6.3.1",
+        "eslint-plugin-react": "^7.20.5"
+    },
+    "keywords": [
+        "react",
+        "cli",
+        "mock"
+    ],
+    "author": "bo.wang",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/webbx/create-react-app-cli/issues"
+    },
+    "homepage": "https://github.com/webbx/create-react-app-cli#readme"
+}

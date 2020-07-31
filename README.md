@@ -26,7 +26,9 @@ npm install
 ## Usage
 
 ```sh
-npm run start
+npm link
+
+cracli init [projectName]
 ```
 
 ## Author
