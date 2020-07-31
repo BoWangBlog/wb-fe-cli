@@ -23,7 +23,7 @@
 npm install
 ```
 
-## Usage
+## Usage develop
 
 ```sh
 npm link
@@ -31,6 +31,12 @@ npm link
 cracli init [projectName]
 ```
 
+## Usage
+
+```shell script
+npm install -g cracli
+cracli init [projectName]
+```
 ## Author
 
 👤 **bo.wang**
