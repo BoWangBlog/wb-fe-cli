@@ -32,7 +32,7 @@ program.version(require('./package').version, '-v, --version')
             ]).then((answers) => {
                 // start to download
                 const spinner = ora(chalk.greenBright('downloading template, wait a moment...'));
-                console.log()
+                console.log();
 
                 spinner.start();
                 const downloadPath = `direct:https://github.com/webbx/${answers.buildTool}-react-template.git#master`
@@ -46,8 +46,9 @@ program.version(require('./package').version, '-v, --version')
                     spinner.succeed();
 
                     // 安装依赖
+                    console.log();
                     console.log(chalk.blackBright('Waiting, installing dependencies...'));
-                    console.log()
+                    console.log();
 
                     install({ cwd: name}).then(() => {
                         const meta = {
@@ -60,9 +61,8 @@ program.version(require('./package').version, '-v, --version')
                         const result = handlebars.compile(content)(meta);
                         fs.writeFileSync(fileName, result)
 
-                        console.log()
                         console.log(chalk.blue(`Congratulations, ${name} created successfully!!!`));
-                        console.log()
+                        console.log();
                     });
                 })
             })

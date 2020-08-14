@@ -3,15 +3,12 @@
   <a href="https://www.npmjs.com/package/wb-create-react-cli" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/wb-create-react-cli.svg">
   </a>
-  <a href="https://github.com/webbx/wb-create-react-app-cli#readme" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/webbx/wb-create-react-app-cli/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-  <a href="https://github.com/webbx/wb-create-react-app-cli/blob/master/LICENSE" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/github/license/BoWang816/wb-create-react-cli" />
-  </a>
+  <img alt="npm" src="https://img.shields.io/npm/dt/wb-create-react-cli"> 
+  <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/wb-create-react-cli">
+  <a href="https://github.com/webbx/wb-create-react-app-cli/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/webbx/wb-create-react-app-cli"></a>
+  <a href="https://github.com/webbx/wb-create-react-app-cli/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/webbx/wb-create-react-app-cli">
+  </a> 
 </p>
 
 > a react project cli, help you create a react project with webpack or parcel quickly
@@ -35,14 +32,14 @@ cracli init [projectName]
 ## Usage
 
 ```shell script
-npm insttall -g wb-create-react-cli
+npm install -g wb-create-react-cli
 cracli init [projectName]
 ```
 
-## Run tests
+## build tools of template 
 
 ```sh
-npm run test
+webpack, parcel, vite
 ```
 
 ## Author
