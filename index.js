@@ -19,7 +19,7 @@ program.version(require('./package').version, '-v, --version')
                     name: 'buildTool',
                     message: 'Which packaging tool to use for the project?',
                     type: 'list',
-                    choices: ['webpack', 'parcel', 'vite'],
+                    choices: ['webpack', 'vite'],
                 },
                 {
                     name: 'description',

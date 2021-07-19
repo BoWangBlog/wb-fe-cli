@@ -1,3 +1,7 @@
+# CHANGELOG
+
+## 2021-07-19 v0.0.4
+delete parcel template, publish v0.0.4
 
 ## 2020-08-13 v0.0.3
 add vite template, publish v0.0.3

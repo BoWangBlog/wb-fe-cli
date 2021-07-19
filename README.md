@@ -5,15 +5,15 @@
   </a>
   <img alt="npm" src="https://img.shields.io/npm/dt/wb-create-react-cli"> 
   <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/wb-create-react-cli">
-  <a href="https://github.com/webbx/wb-create-react-app-cli/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/webbx/wb-create-react-app-cli"></a>
-  <a href="https://github.com/webbx/wb-create-react-app-cli/issues">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/webbx/wb-create-react-app-cli">
+  <a href="https://github.com/WangBOFrontEnd/wb-create-react-app-cli/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/WangBOFrontEnd/wb-create-react-app-cli"></a>
+  <a href="https://github.com/WangBOFrontEnd/wb-create-react-app-cli/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/WangBOFrontEnd/wb-create-react-app-cli">
   </a> 
 </p>
 
 > a react project cli, help you create a react project with webpack or parcel quickly
 
-### 🏠 [Homepage](https://github.com/webbx/wb-create-react-app-cli#readme)
+### 🏠 [Homepage](https://github.com/WangBOFrontEnd/wb-create-react-app-cli#readme)
 
 ## Install
 
@@ -39,7 +39,7 @@ cracli init [projectName]
 ## build tools of template 
 
 ```sh
-webpack, parcel, vite
+webpack and vite
 ```
 
 ## Author
@@ -51,7 +51,7 @@ webpack, parcel, vite
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/webbx/wb-create-react-app-cli/issues). You can also take a look at the [contributing guide](https://github.com/webbx/wb-create-react-app-cli/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/WangBOFrontEnd/wb-create-react-app-cli/issues). You can also take a look at the [contributing guide](https://github.com/WangBOFrontEnd/wb-create-react-app-cli/blob/master/CONTRIBUTING.md).
 
 ## Show your support
 
@@ -60,7 +60,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2020 [bo.wang](https://github.com/BoWang816).<br />
-This project is [ISC](https://github.com/webbx/wb-create-react-app-cli/blob/master/LICENSE) licensed.
+This project is [ISC](https://github.com/WangBOFrontEnd/wb-create-react-app-cli/blob/master/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
