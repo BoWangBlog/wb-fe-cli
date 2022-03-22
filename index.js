@@ -1,79 +1,64 @@
-#!/usr/bin/env node
+#! /usr/bin/env node
 
-const fs = require('fs');
-const program = require('commander');
-const chalk = require('chalk');
-const download = require('download-git-repo');
-const inquirer = require('inquirer');
-const ora = require('ora');
-const symbols = require('log-symbols');
-const handlebars = require('handlebars');
-const install = require('./utils/index');
+const {program} = require("commander");
+const chalk = require("chalk");
+const fs = require('fs-extra');
+const path = require("path");
+const create = require('./utils/create');
+const inquirer = require("inquirer");
+const ora = require("ora");
 
-program.version(require('./package').version, '-v, --version')
-    .command('init <name>')
-    .action((name) => {
-        if (!fs.existsSync(name)) {
-            inquirer.prompt([
-                {
-                    name: 'buildTool',
-                    message: 'Which packaging tool to use for the project?',
-                    type: 'list',
-                    choices: ['webpack', 'vite'],
-                },
-                {
-                    name: 'description',
-                    message: 'please enter project description:',
-                },
-                {
-                    name: 'author',
-                    message: 'please enter project author:',
-                }
-            ]).then((answers) => {
-                // start to download
-                const spinner = ora(chalk.greenBright('downloading template, wait a moment...'));
-                console.log();
+const pkgVersion = require('./package.json').version;
 
+program.version(pkgVersion);
+
+program
+    .command("create <project-name>")
+    .description("create a new project name is <project-name>")
+    .option("-f, --force", "overwrite target directory if it exists")
+    .action(async (projectName, options) => {
+        // 获取当前工作目录
+        const cwd = process.cwd();
+        // 拼接到目标文件夹
+        const targetDirectory = path.join(cwd, projectName);
+        // 如果目标文件夹已存在
+        if (fs.existsSync(targetDirectory)) {
+            // 判断是否使用-f强制新建
+            if (!options.force) {
+                // 未使用则提示已存在
+                console.error(chalk.red(`Project already exist! Please change your project name or use ${chalk.cyan(`uni-cli create ${projectName} -f`)} to create`))
+                return;
+            }
+            // 使用-f强制新建，则需要二次提示
+            const {isOverWrite} = await inquirer.prompt([{
+                name: "isOverWrite",
+                type: "list",
+                message: "Target directory already exists, Would you like to overwrite it?",
+                choices: [
+                    {name: "Yes, Overwrite", value: true},
+                    {name: "No, Cancel", value: false}
+                ]
+            }])
+            if (isOverWrite) {
+                const spinner = ora(chalk.blackBright('The project is Deleting, wait a moment...'));
                 spinner.start();
-                const downloadPath = `direct:https://github.com/BoWangBlog/${answers.buildTool}-react-template.git#master`
-                download(downloadPath, name, {clone: true}, (err) => {
-                    // 下载错误
-                    if (err) {
-                        spinner.fail();
-                        console.error(symbols.error, chalk.red(`${err}download template failed, please check your network connection and try again`))
-                        process.exit(1);
-                    }
-                    spinner.succeed();
-
-                    // 安装依赖
-                    console.log();
-                    console.log(chalk.blackBright('Waiting, installing dependencies...'));
-                    console.log();
-
-                    install({ cwd: name}).then(() => {
-                        const meta = {
-                            name,
-                            description: answers.description,
-                            author: answers.author,
-                        }
-                        const fileName = `${name}/package.json`;
-                        const content = fs.readFileSync(fileName).toString();
-                        const result = handlebars.compile(content)(meta);
-                        fs.writeFileSync(fileName, result)
-
-                        console.log(chalk.blue(`Congratulations, ${name} created successfully!!!`));
-                        console.log();
-                    });
-                })
-            })
-        } else {
-            // 错误提示项目已存在，避免覆盖原有项目
-            console.error(symbols.error, chalk.red('project already exist!!!'))
+                await fs.removeSync(targetDirectory);
+                spinner.succeed();
+                await create(projectName, options);
+                return;
+            }
+            console.error(chalk.green("You cancel to create project"));
+            return;
         }
-    }).on('--help', () => {
-    console.log('  Examples:')
-    console.log('    $ w init index')
-    console.log()
-})
+        await create(projectName, options, targetDirectory);
+    });
+
+program.on("--help", () => {
+    console.log();
+    console.log(
+        `Run ${chalk.cyan("uni-cli <command> --help")} to get more information`
+    );
+    console.log();
+});
 
 program.parse(process.argv)

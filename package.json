@@ -1,6 +1,6 @@
 {
     "name": "wb-fe-cli",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "a react project cli, help you create a react project with webpack or parcel quickly",
     "main": "index.js",
     "scripts": {
@@ -19,13 +19,14 @@
     "dependencies": {
         "chalk": "^4.1.0",
         "commander": "^6.0.0",
+        "cross-spawn": "^7.0.3",
         "download": "^8.0.0",
         "download-git-repo": "^3.0.2",
+        "fs-extra": "^10.0.1",
         "handlebars": "^4.7.6",
         "inquirer": "^7.3.3",
         "ora": "^4.0.5",
-        "symbols": "^0.0.6",
-        "cross-spawn": "^7.0.3"
+        "symbols": "^0.0.6"
     },
     "devDependencies": {
         "babel-eslint": "^10.1.0",
