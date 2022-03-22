@@ -11,7 +11,7 @@
   </a> 
 </p>
 
-> a react project cli, help you create a react project with webpack or parcel quickly
+> a react project cli, help you create a react project with webpack or vite quickly
 
 ### 🏠 [Homepage](https://github.com/WangBOFrontEnd/wb-create-react-app-cli#readme)
 
