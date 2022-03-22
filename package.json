@@ -1,6 +1,6 @@
 {
-    "name": "wb-create-react-cli",
-    "version": "0.1.0",
+    "name": "wb-fe-cli",
+    "version": "0.0.1",
     "description": "a react project cli, help you create a react project with webpack or parcel quickly",
     "main": "index.js",
     "scripts": {
@@ -14,7 +14,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/webbx/wb-create-react-app-cli.git"
+        "url": "git+https://github.com/BoWangBlog/wb-fe-cli.git"
     },
     "dependencies": {
         "chalk": "^4.1.0",
@@ -39,7 +39,7 @@
     "author": "bo.wang",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/webbx/wb-create-react-app-cli/issues"
+        "url": "https://github.com/BoWangBlog/wb-fe-cli/issues"
     },
-    "homepage": "https://github.com/webbx/wb-create-react-app-cli#readme"
+    "homepage": "https://github.com/BoWangBlog/wb-fe-cli#readme"
 }

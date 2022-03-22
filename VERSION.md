@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2022-03-22 v0.0.1
+new name, new pkg
+
 ## 2021-07-19 v0.0.4
 delete parcel template, publish v0.0.4
 

@@ -35,7 +35,7 @@ program.version(require('./package').version, '-v, --version')
                 console.log();
 
                 spinner.start();
-                const downloadPath = `direct:https://github.com/webbx/${answers.buildTool}-react-template.git#master`
+                const downloadPath = `direct:https://github.com/BoWangBlog/${answers.buildTool}-react-template.git#master`
                 download(downloadPath, name, {clone: true}, (err) => {
                     // 下载错误
                     if (err) {

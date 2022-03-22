@@ -1,10 +1,10 @@
-<h1 align="center">Welcome to wb-create-react-cli 👋</h1>
+<h1 align="center">Welcome to wb-fe-cli 👋</h1>
 <p>
-  <a href="https://www.npmjs.com/package/wb-create-react-cli" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/wb-create-react-cli.svg">
+  <a href="https://www.npmjs.com/package/wb-fe-cli" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/wb-fe-cli.svg">
   </a>
-  <img alt="npm" src="https://img.shields.io/npm/dt/wb-create-react-cli"> 
-  <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/wb-create-react-cli">
+  <img alt="npm" src="https://img.shields.io/npm/dt/wb-fe-cli"> 
+  <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/wb-fe-cli">
   <a href="https://github.com/WangBOFrontEnd/wb-create-react-app-cli/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/WangBOFrontEnd/wb-create-react-app-cli"></a>
   <a href="https://github.com/WangBOFrontEnd/wb-create-react-app-cli/issues">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/WangBOFrontEnd/wb-create-react-app-cli">
@@ -32,7 +32,7 @@ cracli init [projectName]
 ## Usage
 
 ```shell script
-npm install -g wb-create-react-cli
+npm install -g wb-fe-cli
 cracli init [projectName]
 ```
 
