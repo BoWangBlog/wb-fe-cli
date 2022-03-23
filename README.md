@@ -26,14 +26,14 @@ npm install
 ```sh
 npm link
 
-cracli init [projectName]
+wb-cli init [projectName]
 ```
 
 ## Usage
 
 ```shell script
 npm install -g wb-fe-cli
-cracli init [projectName]
+wb-cli init [projectName]
 ```
 
 ## build tools of template 

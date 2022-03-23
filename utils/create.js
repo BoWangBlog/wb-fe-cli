@@ -47,6 +47,8 @@ module.exports = async function create(projectName, options) {
                 process.exit(1);
             }
             spinner.succeed();
+            console.log();
+            console.log(chalk.greenBright('Download template successfully, then install dependencies...'));
 
             // 安装依赖
             console.log();
@@ -67,14 +69,13 @@ module.exports = async function create(projectName, options) {
                     font: "Epic",
                     horizontalLayout: "default",
                     verticalLayout: "default",
-                    width: 100,
+                    width: 120,
                     whitespaceBreak: true,
                 }));
                 console.log();
                 console.log(chalk.blue(`Congratulations, ${projectName} created successfully!!!`));
                 console.log(`\r\n  cd ${chalk.cyan(projectName)}`);
-                console.log("  npm install\r\n");
-                console.log("  npm run start\r\n");
+                console.log("\r\n  npm run start\r\n");
             });
         });
     });
