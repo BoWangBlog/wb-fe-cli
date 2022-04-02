@@ -33,13 +33,15 @@ wb-cli init [projectName]
 
 ```shell script
 npm install -g wb-fe-cli
-wb-cli init [projectName]
+
+wb-cli init [projectName] # init project
+wb-cli update # update version
 ```
 
 ## build tools of template 
 
 ```sh
-webpack and vite
+webpack or vite
 ```
 
 ## Author

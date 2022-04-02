@@ -4,6 +4,7 @@ const {program} = require("commander");
 const chalk = require("chalk");
 const path = require("path");
 const fs = require('fs-extra');
+const figlet = require('figlet');
 const create = require('./utils/create');
 const checkUpdate = require('./utils/checkUpdate');
 
@@ -25,7 +26,7 @@ program
         // 如果目标文件夹已存在
         if (fs.existsSync(targetDirectory)) {
             if (!options.force) {
-                console.error(chalk.red(`Project already exist! Please change your project name or use ${chalk.greenBright(`wb-cli init ${projectName} -f`)} to create`))
+                console.error(chalk.red(`Project already exist! Please change your project name or use ${chalk.greenBright(`wb-cli create ${projectName} -f`)} to create`))
                 return;
             }
             const {isOverWrite} = await inquirer.prompt([{
@@ -42,15 +43,15 @@ program
                 spinner.start();
                 await fs.removeSync(targetDirectory);
                 spinner.succeed();
-                console.info(chalk.green("Deleted Successfully, start init project..."));
+                console.info(chalk.green("✨ Deleted Successfully, start init project..."));
                 console.log();
-                await create(projectName, options);
+                await create(projectName);
                 return;
             }
             console.error(chalk.green("You cancel to create project"));
             return;
         }
-        await create(projectName, options, targetDirectory);
+        await create(projectName);
     });
 
 program
@@ -61,11 +62,13 @@ program
     });
 
 program.on("--help", () => {
-    console.log();
-    console.log(
-        `Run ${chalk.cyan("wb-cli <command> --help")} to get more information`
-    );
-    console.log();
+    console.log(figlet.textSync("wb-cli", {
+        font: "Standard",
+        horizontalLayout: 'full',
+        verticalLayout: 'fitted',
+        width: 120,
+        whitespaceBreak: true
+    }));
 });
 
 program.parse(process.argv)

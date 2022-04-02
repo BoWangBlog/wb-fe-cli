@@ -1,9 +1,15 @@
+/**
+ * 安装依赖
+ * install.js
+ * @author wangbo
+ * @since 2022/3/22
+ */
 const spawn = require("cross-spawn");
 
 module.exports = function install(options) {
-    const cwd = options.cwd || process.cwd();
+    const cwd = options.projectName || process.cwd();
     return new Promise((resolve, reject) => {
-        const command = options.isYarn ? "yarn" : "npm";
+        const command = options.installTool;
         const args = ["install", "--save", "--save-exact", "--loglevel", "error"];
         const child = spawn(command, args, {cwd, stdio: ["pipe", process.stdout, process.stderr]});
 

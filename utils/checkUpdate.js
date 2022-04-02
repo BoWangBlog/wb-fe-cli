@@ -34,7 +34,7 @@ module.exports = async function checkUpdate() {
     ).stdout;
 
     if (!remoteVersionStr) {
-        console.log(chalk.red('Failed to get the cli version, Please check your network or vpn'));
+        console.log(chalk.red('Failed to get the cli version, Please check your network'));
         process.exit(1);
     }
     const remoteVersion = semver.clean(remoteVersionStr, null);
