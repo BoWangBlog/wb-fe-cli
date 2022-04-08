@@ -57,7 +57,7 @@ module.exports = async function create(projectName) {
         const destDir = path.join(process.cwd(), projectName);
         // 由于git项目文件名称的限制，这里需要转换一下移动端的名称
         // 下载地址
-        const downloadPath = `direct:${baseUrl}/${answers.type}-${answers.frame}-template.git#${answers.branch}`
+        const downloadPath = `direct:${baseUrl}/${answers.type}-${answers.frame}-template.git#master`
         // 创建文件夹
         fs.mkdir(destDir, {recursive: true}, (err) => {
             if (err) throw err;

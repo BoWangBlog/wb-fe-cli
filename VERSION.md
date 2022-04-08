@@ -1,8 +1,11 @@
 # CHANGELOG
 
+## 2022-04-08 v0.0.5
+- fix install dependencies error when description or author has space;
+- delete choose branch question;
+
 ## 2022-04-02 v0.0.4
 - add renderTemplate，set registry;
-- publish v0.0.4
 
 ## 2022-03-23 v0.0.3
 - add update command, publish v0.0.3

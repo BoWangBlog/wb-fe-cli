@@ -30,7 +30,11 @@ module.exports = async function renderTemplate(result, projectName) {
             .destination(path.resolve(projectName))
             .use(async (files, metal, done) => {
                 const a = require(path.join(result, 'ask.js'));
-                const r = await inquirer.prompt(a);
+                let r = await inquirer.prompt(a);
+                Object.keys(r).forEach(key => {
+                    // 将输入内容前后空格清除，不然安装依赖会报错
+                    r[key] = r[key]?.trim() || '';
+                });
                 const m = metal.metadata();
                 const tmp = {
                     ...r,

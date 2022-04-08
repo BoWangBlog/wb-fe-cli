@@ -23,13 +23,6 @@ const promptList = [
         choices: ['react', 'vue'],
     },
     {
-        name: 'branch',
-        message: 'Which branch to use for the project?',
-        type: 'list',
-        default: 'master',
-        choices: ['master', 'develop'],
-    },
-    {
         name: 'setRegistry',
         message: "Would you like to help you set registry remote?",
         type: 'confirm',
